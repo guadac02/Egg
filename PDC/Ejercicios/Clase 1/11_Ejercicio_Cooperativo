@@ -1,0 +1,25 @@
+Algoritmo Unidad_Decena_Centena
+	
+	Definir num, centena, decena, unidad, unidad_mil Como Entero
+	
+	Escribir "Escriba un numero de 4 digitos"
+	Leer num //1989
+	
+	unidad = num mod 10 //  1989/10  --- 198.9
+	num = trunc (num/10) // 198
+	
+	decena = num mod 10 // 198/10 --- 19.8
+	num = trunc (num/10) // 19
+	
+	centena = num mod 10 // 1.9
+	num = trunc (num/10) // 1
+
+	unidad_mil = num mod 10
+	
+	Escribir "Unidad de mil: " unidad_mil
+	Escribir "Centena: " centena
+	Escribir "Decena: " decena
+	Escribir "Unidad: " unidad
+
+	
+FinAlgoritmo

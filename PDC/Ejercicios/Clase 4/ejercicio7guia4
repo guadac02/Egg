@@ -1,0 +1,54 @@
+//Crear un subproceso que rellene dos arreglos de tamaño n, con números aleatorios. Después,
+//	hacer una función que reciba los dos arreglos y diga si todos sus valores son iguales o no. La
+//			función debe devolver el resultado de está validación, para mostrar el mensaje en el algoritmo.
+//				Nota: recordar el uso de las variables de tipo lógico.
+
+Algoritmo ejercicio7
+	Definir n, VectorA, VectorB Como Entero
+	
+	Escribir "Ingrese el tamano del vector "
+	leer n
+	
+	Dimension VectorA(n) , VectorB(n)
+	
+	Escribir "-------------Vector A------------"
+	cargarVector(VectorA,n)
+	Escribir "-------------Vector B------------"
+	cargarVector(VectorB,n)
+	Escribir ""
+	
+	Escribir "Los vectores son iguales? "  LogicaVector(VectorA,VectorB,n)
+	
+FinAlgoritmo
+
+SubProceso cargarVector(Vector ,tamano )
+	Definir i Como Entero
+	
+	para i=0 Hasta tamano-1 Hacer
+		vector(i)= Aleatorio(-100,100)
+		Escribir Sin Saltar "[" vector(i) "]"
+	FinPara
+	Escribir ""
+	
+FinSubProceso
+
+Funcion resultado<-LogicaVector(VectorA,VectorB,n)
+	Definir resultado Como Logico
+	Definir i Como Entero
+	
+	Para i=0 hasta n-1
+		si VectorA(i) = VectorB(i) Entonces
+			
+			resultado=Verdadero
+			
+		SiNo
+			resultado=falso
+		FinSi
+		
+	FinPara
+	
+	
+	
+	
+FinFuncion
+	
